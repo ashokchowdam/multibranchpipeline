@@ -1,0 +1,9 @@
+node('built-in') 
+{
+    stage('continousdownload')
+    {                                                
+      git 'https://github.com/intelliqittrainings/maven.git'            
+    }
+    stage('continousbuild')
+    {
+        sh 'mvn package'
